@@ -5,6 +5,7 @@
 from __future__ import unicode_literals
 
 import json
+from json import JSONDecodeError
 
 import frappe
 from frappe import _
@@ -30,15 +31,18 @@ class EditorjsTemplate(Document):
     :return: None
     """
     template_doc = frappe.get_doc('Editorjs Template', self.name)
-
-    # Parse the data field in the block
-    _data: dict = json.loads(data)
-    _data_keys = _data.keys()
+    _data = None
+    try:
+      # Parse the data field in the block
+      _data: dict = json.loads(data)
+    except JSONDecodeError:
+      frappe.throw(_("Invalid Data"))
 
     # Check if the data is not None
-    if not _data:
+    if not _data or not isinstance(_data, dict):
       frappe.throw(_("Invalid Data"))
     else:
+      _data_keys = _data.keys()
       # Get all the non nullable keys in the template
       non_nullable_template_keys = list(map(lambda x: x.key, list(filter(lambda x: not x.nullable, template_doc.data))))
 
