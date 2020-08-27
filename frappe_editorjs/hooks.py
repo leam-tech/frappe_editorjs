@@ -11,6 +11,12 @@ app_color = "grey"
 app_email = "admin@leam.ae"
 app_license = "MIT"
 
+fixtures = [
+    {
+        "dt": "Editorjs Template"
+    }
+]
+
 # Includes in <head>
 # ------------------
 
@@ -134,4 +140,3 @@ app_license = "MIT"
 # exempt linked doctypes from being automatically cancelled
 #
 # auto_cancel_exempted_doctypes = ["Auto Repeat"]
-

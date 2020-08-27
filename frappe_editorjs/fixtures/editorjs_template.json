@@ -1,0 +1,449 @@
+[
+ {
+  "data": [
+   {
+    "key": "text",
+    "nullable": 0,
+    "parent": "paragraph",
+    "parentfield": "data",
+    "parenttype": "Editorjs Template",
+    "type": "String"
+   }
+  ],
+  "docstatus": 0,
+  "doctype": "Editorjs Template",
+  "modified": "2020-08-17 15:41:45.511981",
+  "name": "paragraph",
+  "parent": null,
+  "parentfield": null,
+  "parenttype": null,
+  "type": "paragraph"
+ },
+ {
+  "data": [
+   {
+    "key": "text",
+    "nullable": 0,
+    "parent": "header",
+    "parentfield": "data",
+    "parenttype": "Editorjs Template",
+    "type": "String"
+   },
+   {
+    "key": "level",
+    "nullable": 0,
+    "parent": "header",
+    "parentfield": "data",
+    "parenttype": "Editorjs Template",
+    "type": "Number"
+   }
+  ],
+  "docstatus": 0,
+  "doctype": "Editorjs Template",
+  "modified": "2020-08-27 10:34:33.812731",
+  "name": "header",
+  "parent": null,
+  "parentfield": null,
+  "parenttype": null,
+  "type": "header"
+ },
+ {
+  "data": [
+   {
+    "key": "style",
+    "nullable": 0,
+    "parent": "list",
+    "parentfield": "data",
+    "parenttype": "Editorjs Template",
+    "type": "String"
+   },
+   {
+    "key": "items",
+    "nullable": 0,
+    "parent": "list",
+    "parentfield": "data",
+    "parenttype": "Editorjs Template",
+    "type": "List"
+   }
+  ],
+  "docstatus": 0,
+  "doctype": "Editorjs Template",
+  "modified": "2020-08-27 10:35:56.503542",
+  "name": "list",
+  "parent": null,
+  "parentfield": null,
+  "parenttype": null,
+  "type": "list"
+ },
+ {
+  "data": [],
+  "docstatus": 0,
+  "doctype": "Editorjs Template",
+  "modified": "2020-08-27 10:36:27.162218",
+  "name": "delimiter",
+  "parent": null,
+  "parentfield": null,
+  "parenttype": null,
+  "type": "delimiter"
+ },
+ {
+  "data": [
+   {
+    "key": "content",
+    "nullable": 0,
+    "parent": "table",
+    "parentfield": "data",
+    "parenttype": "Editorjs Template",
+    "type": "List"
+   }
+  ],
+  "docstatus": 0,
+  "doctype": "Editorjs Template",
+  "modified": "2020-08-27 10:37:37.511911",
+  "name": "table",
+  "parent": null,
+  "parentfield": null,
+  "parenttype": null,
+  "type": "table"
+ },
+ {
+  "data": [
+   {
+    "key": "html",
+    "nullable": 0,
+    "parent": "raw",
+    "parentfield": "data",
+    "parenttype": "Editorjs Template",
+    "type": "String"
+   }
+  ],
+  "docstatus": 0,
+  "doctype": "Editorjs Template",
+  "modified": "2020-08-27 10:38:17.783508",
+  "name": "raw",
+  "parent": null,
+  "parentfield": null,
+  "parenttype": null,
+  "type": "raw"
+ },
+ {
+  "data": [
+   {
+    "key": "text",
+    "nullable": 0,
+    "parent": "text",
+    "parentfield": "data",
+    "parenttype": "Editorjs Template",
+    "type": "String"
+   }
+  ],
+  "docstatus": 0,
+  "doctype": "Editorjs Template",
+  "modified": "2020-08-27 10:39:00.513639",
+  "name": "text",
+  "parent": null,
+  "parentfield": null,
+  "parenttype": null,
+  "type": "text"
+ },
+ {
+  "data": [
+   {
+    "key": "title",
+    "nullable": 0,
+    "parent": "warning",
+    "parentfield": "data",
+    "parenttype": "Editorjs Template",
+    "type": "String"
+   },
+   {
+    "key": "message",
+    "nullable": 0,
+    "parent": "warning",
+    "parentfield": "data",
+    "parenttype": "Editorjs Template",
+    "type": "String"
+   }
+  ],
+  "docstatus": 0,
+  "doctype": "Editorjs Template",
+  "modified": "2020-08-27 10:39:52.148832",
+  "name": "warning",
+  "parent": null,
+  "parentfield": null,
+  "parenttype": null,
+  "type": "warning"
+ },
+ {
+  "data": [
+   {
+    "key": "link",
+    "nullable": 0,
+    "parent": "linkTool",
+    "parentfield": "data",
+    "parenttype": "Editorjs Template",
+    "type": "String"
+   },
+   {
+    "key": "meta",
+    "nullable": 0,
+    "parent": "linkTool",
+    "parentfield": "data",
+    "parenttype": "Editorjs Template",
+    "type": "Object"
+   }
+  ],
+  "docstatus": 0,
+  "doctype": "Editorjs Template",
+  "modified": "2020-08-27 10:43:32.990970",
+  "name": "linkTool",
+  "parent": null,
+  "parentfield": null,
+  "parenttype": null,
+  "type": "linkTool"
+ },
+ {
+  "data": [
+   {
+    "key": "code",
+    "nullable": 0,
+    "parent": "code",
+    "parentfield": "data",
+    "parenttype": "Editorjs Template",
+    "type": "String"
+   }
+  ],
+  "docstatus": 0,
+  "doctype": "Editorjs Template",
+  "modified": "2020-08-27 10:46:29.108011",
+  "name": "code",
+  "parent": null,
+  "parentfield": null,
+  "parenttype": null,
+  "type": "code"
+ },
+ {
+  "data": [
+   {
+    "key": "text",
+    "nullable": 0,
+    "parent": "quote",
+    "parentfield": "data",
+    "parenttype": "Editorjs Template",
+    "type": "String"
+   },
+   {
+    "key": "caption",
+    "nullable": 0,
+    "parent": "quote",
+    "parentfield": "data",
+    "parenttype": "Editorjs Template",
+    "type": "String"
+   },
+   {
+    "key": "alignment",
+    "nullable": 0,
+    "parent": "quote",
+    "parentfield": "data",
+    "parenttype": "Editorjs Template",
+    "type": "String"
+   }
+  ],
+  "docstatus": 0,
+  "doctype": "Editorjs Template",
+  "modified": "2020-08-27 10:49:14.145967",
+  "name": "quote",
+  "parent": null,
+  "parentfield": null,
+  "parenttype": null,
+  "type": "quote"
+ },
+ {
+  "data": [
+   {
+    "key": "service",
+    "nullable": 0,
+    "parent": "embed",
+    "parentfield": "data",
+    "parenttype": "Editorjs Template",
+    "type": "String"
+   },
+   {
+    "key": "source",
+    "nullable": 0,
+    "parent": "embed",
+    "parentfield": "data",
+    "parenttype": "Editorjs Template",
+    "type": "String"
+   },
+   {
+    "key": "embed",
+    "nullable": 0,
+    "parent": "embed",
+    "parentfield": "data",
+    "parenttype": "Editorjs Template",
+    "type": "String"
+   },
+   {
+    "key": "width",
+    "nullable": 0,
+    "parent": "embed",
+    "parentfield": "data",
+    "parenttype": "Editorjs Template",
+    "type": "Number"
+   },
+   {
+    "key": "height",
+    "nullable": 0,
+    "parent": "embed",
+    "parentfield": "data",
+    "parenttype": "Editorjs Template",
+    "type": "Number"
+   },
+   {
+    "key": "caption",
+    "nullable": 0,
+    "parent": "embed",
+    "parentfield": "data",
+    "parenttype": "Editorjs Template",
+    "type": "String"
+   }
+  ],
+  "docstatus": 0,
+  "doctype": "Editorjs Template",
+  "modified": "2020-08-27 10:50:43.808101",
+  "name": "embed",
+  "parent": null,
+  "parentfield": null,
+  "parenttype": null,
+  "type": "embed"
+ },
+ {
+  "data": [
+   {
+    "key": "file",
+    "nullable": 0,
+    "parent": "image",
+    "parentfield": "data",
+    "parenttype": "Editorjs Template",
+    "type": "Object"
+   },
+   {
+    "key": "caption",
+    "nullable": 0,
+    "parent": "image",
+    "parentfield": "data",
+    "parenttype": "Editorjs Template",
+    "type": "String"
+   },
+   {
+    "key": "withBorder",
+    "nullable": 0,
+    "parent": "image",
+    "parentfield": "data",
+    "parenttype": "Editorjs Template",
+    "type": "Boolean"
+   },
+   {
+    "key": "withBackground",
+    "nullable": 0,
+    "parent": "image",
+    "parentfield": "data",
+    "parenttype": "Editorjs Template",
+    "type": "Boolean"
+   },
+   {
+    "key": "stretched",
+    "nullable": 0,
+    "parent": "image",
+    "parentfield": "data",
+    "parenttype": "Editorjs Template",
+    "type": "Boolean"
+   }
+  ],
+  "docstatus": 0,
+  "doctype": "Editorjs Template",
+  "modified": "2020-08-27 10:52:07.225261",
+  "name": "image",
+  "parent": null,
+  "parentfield": null,
+  "parenttype": null,
+  "type": "image"
+ },
+ {
+  "data": [
+   {
+    "key": "items",
+    "nullable": 0,
+    "parent": "checklist",
+    "parentfield": "data",
+    "parenttype": "Editorjs Template",
+    "type": "List"
+   }
+  ],
+  "docstatus": 0,
+  "doctype": "Editorjs Template",
+  "modified": "2020-08-27 11:02:49.273299",
+  "name": "checklist",
+  "parent": null,
+  "parentfield": null,
+  "parenttype": null,
+  "type": "checklist"
+ },
+ {
+  "data": [
+   {
+    "key": "latex",
+    "nullable": 0,
+    "parent": "latex",
+    "parentfield": "data",
+    "parenttype": "Editorjs Template",
+    "type": "String"
+   }
+  ],
+  "docstatus": 0,
+  "doctype": "Editorjs Template",
+  "modified": "2020-08-27 11:21:07.369983",
+  "name": "latex",
+  "parent": null,
+  "parentfield": null,
+  "parenttype": null,
+  "type": "latex"
+ },
+ {
+  "data": [
+   {
+    "key": "header",
+    "nullable": 0,
+    "parent": "expandable",
+    "parentfield": "data",
+    "parenttype": "Editorjs Template",
+    "type": "String"
+   },
+   {
+    "key": "body",
+    "nullable": 0,
+    "parent": "expandable",
+    "parentfield": "data",
+    "parenttype": "Editorjs Template",
+    "type": "List"
+   },
+   {
+    "key": "expanded",
+    "nullable": 0,
+    "parent": "expandable",
+    "parentfield": "data",
+    "parenttype": "Editorjs Template",
+    "type": "Boolean"
+   }
+  ],
+  "docstatus": 0,
+  "doctype": "Editorjs Template",
+  "modified": "2020-08-27 14:08:41.724379",
+  "name": "expandable",
+  "parent": null,
+  "parentfield": null,
+  "parenttype": null,
+  "type": "expandable"
+ }
+]
