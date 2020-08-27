@@ -36,10 +36,10 @@ class EditorjsTemplate(Document):
       # Parse the data field in the block
       _data: dict = json.loads(data)
     except JSONDecodeError:
-      frappe.throw(_("Invalid Data"))
+      frappe.throw(_("Invalid Data while decoding"))
 
     # Check if the data is not None
-    if not _data or not isinstance(_data, dict):
+    if _data is None or not isinstance(_data, dict):
       frappe.throw(_("Invalid Data"))
     else:
       _data_keys = _data.keys()
