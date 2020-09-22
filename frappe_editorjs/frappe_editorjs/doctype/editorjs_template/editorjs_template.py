@@ -34,7 +34,7 @@ class EditorjsTemplate(Document):
     _data = None
     try:
       # Parse the data field in the block
-      _data: dict = json.loads(data)
+      _data: dict = frappe.parse_json(frappe.parse_json(data))
     except JSONDecodeError:
       frappe.throw(_("Invalid Data while decoding"))
 
