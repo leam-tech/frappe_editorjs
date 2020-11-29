@@ -78,3 +78,14 @@ class EditorjsTemplate(Document):
       frappe.throw(_(
           "Wrong type for key: {k}. Should be {correct_type} instead of {given_type}".format(k=k, correct_type=_type,
                                                                                              given_type=type(v))))
+
+  def get_print_output(self, data: dict) -> str:
+    """
+    Returns the print output of EditorJS content using the print_format defined.
+    :param data: The dictionary of values to be inserted into the template
+    """
+    return frappe.render_template(self.print_format, context=data)
+
+
+def get_editor_template(template_type: str) -> EditorjsTemplate:
+  return frappe.get_doc("Editorjs Template", template_type)

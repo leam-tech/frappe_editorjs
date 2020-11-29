@@ -7,7 +7,9 @@
  "engine": "InnoDB",
  "field_order": [
   "type",
-  "data"
+  "data",
+  "section_break_3",
+  "print_format"
  ],
  "fields": [
   {
@@ -22,10 +24,21 @@
    "fieldtype": "Table",
    "label": "Data",
    "options": "Editorjs Template Data"
+  },
+  {
+   "fieldname": "section_break_3",
+   "fieldtype": "Section Break",
+   "label": "Print"
+  },
+  {
+   "fieldname": "print_format",
+   "fieldtype": "HTML Editor",
+   "label": "Print Format"
   }
  ],
+ "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2020-08-17 12:14:41.406615",
+ "modified": "2020-11-29 17:32:30.961749",
  "modified_by": "Administrator",
  "module": "Frappe Editorjs",
  "name": "Editorjs Template",
