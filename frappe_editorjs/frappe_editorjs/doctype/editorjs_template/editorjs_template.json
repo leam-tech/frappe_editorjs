@@ -33,12 +33,13 @@
   {
    "fieldname": "print_format",
    "fieldtype": "HTML Editor",
+   "ignore_xss_filter": 1,
    "label": "Print Format"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2020-11-29 17:32:30.961749",
+ "modified": "2020-12-01 11:39:13.914754",
  "modified_by": "Administrator",
  "module": "Frappe Editorjs",
  "name": "Editorjs Template",
