@@ -4,14 +4,14 @@
 
 from __future__ import unicode_literals
 
-import json
+import numbers
 from json import JSONDecodeError
 
 import frappe
 from frappe import _
 from frappe.model.document import Document
+from frappe.utils import get_url
 from six import string_types
-import numbers
 
 
 class EditorjsTemplate(Document):
@@ -84,7 +84,13 @@ class EditorjsTemplate(Document):
     Returns the print output of EditorJS content using the print_format defined.
     :param data: The dictionary of values to be inserted into the template
     """
-    return frappe.render_template(self.print_format, context=data)
+
+    context = frappe._dict(data)
+
+    if self.type == 'image':
+      context.update(frappe._dict(site_url=get_url()))
+
+    return frappe.render_template(self.print_format, context=context)
 
 
 def get_editor_template(template_type: str) -> EditorjsTemplate:
