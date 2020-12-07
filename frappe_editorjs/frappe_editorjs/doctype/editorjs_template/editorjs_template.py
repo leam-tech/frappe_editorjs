@@ -89,7 +89,11 @@ class EditorjsTemplate(Document):
 
     if self.type == 'image':
       context.update(frappe._dict(site_url=get_url()))
-
+    elif self.type == 'expandable':
+      body = ""
+      for item in context.get('body'):
+        body += get_editor_template(item.get("type")).get_print_output(item.get("data"))
+      context.update(frappe._dict(body=body))
     return frappe.render_template(self.print_format, context=context)
 
 
