@@ -2,6 +2,85 @@
  {
   "data": [
    {
+    "key": "video",
+    "nullable": 0,
+    "parent": "video",
+    "parentfield": "data",
+    "parenttype": "Editorjs Template",
+    "type": "String"
+   },
+   {
+    "key": "caption",
+    "nullable": 0,
+    "parent": "video",
+    "parentfield": "data",
+    "parenttype": "Editorjs Template",
+    "type": "String"
+   }
+  ],
+  "docstatus": 0,
+  "doctype": "Editorjs Template",
+  "modified": "2020-12-07 16:14:55.822193",
+  "name": "video",
+  "parent": null,
+  "parentfield": null,
+  "parenttype": null,
+  "print_format": "Video: <a href=\"{{video}}\">{{caption}}</a>",
+  "type": "video"
+ },
+ {
+  "data": [
+   {
+    "key": "text",
+    "nullable": 0,
+    "parent": "Math",
+    "parentfield": "data",
+    "parenttype": "Editorjs Template",
+    "type": "String"
+   }
+  ],
+  "docstatus": 0,
+  "doctype": "Editorjs Template",
+  "modified": "2020-11-03 12:45:56.122007",
+  "name": "Math",
+  "parent": null,
+  "parentfield": null,
+  "parenttype": null,
+  "print_format": null,
+  "type": "Math"
+ },
+ {
+  "data": [
+   {
+    "key": "file",
+    "nullable": 0,
+    "parent": "attaches",
+    "parentfield": "data",
+    "parenttype": "Editorjs Template",
+    "type": "Object"
+   },
+   {
+    "key": "title",
+    "nullable": 0,
+    "parent": "attaches",
+    "parentfield": "data",
+    "parenttype": "Editorjs Template",
+    "type": "String"
+   }
+  ],
+  "docstatus": 0,
+  "doctype": "Editorjs Template",
+  "modified": "2020-11-14 11:30:38.115761",
+  "name": "attaches",
+  "parent": null,
+  "parentfield": null,
+  "parenttype": null,
+  "print_format": null,
+  "type": "attaches"
+ },
+ {
+  "data": [
+   {
     "key": "text",
     "nullable": 0,
     "parent": "paragraph",
@@ -12,11 +91,12 @@
   ],
   "docstatus": 0,
   "doctype": "Editorjs Template",
-  "modified": "2020-08-17 15:41:45.511981",
+  "modified": "2020-12-07 16:54:10.307922",
   "name": "paragraph",
   "parent": null,
   "parentfield": null,
   "parenttype": null,
+  "print_format": "<p>{{text}}</p>",
   "type": "paragraph"
  },
  {
@@ -40,11 +120,12 @@
   ],
   "docstatus": 0,
   "doctype": "Editorjs Template",
-  "modified": "2020-08-27 10:34:33.812731",
+  "modified": "2020-12-07 16:11:24.486396",
   "name": "header",
   "parent": null,
   "parentfield": null,
   "parenttype": null,
+  "print_format": "<h{{level}}>{{text}}</h{{level}}>",
   "type": "header"
  },
  {
@@ -68,22 +149,24 @@
   ],
   "docstatus": 0,
   "doctype": "Editorjs Template",
-  "modified": "2020-08-27 10:35:56.503542",
+  "modified": "2020-12-07 16:13:04.105297",
   "name": "list",
   "parent": null,
   "parentfield": null,
   "parenttype": null,
+  "print_format": "<div>\n{%  if style == \"ordered\" %}\n  <ol>\n{% else  %}\n<ul>\n{% endif %}\n\n{% for item in items %}\n  <li>{{ item }}</li>\n{% endfor %}\n\n{%  if style == \"ordered\" %}\n  </ol>\n{% else  %}\n  </ul>\n{% endif %}\n</div>\n",
   "type": "list"
  },
  {
   "data": [],
   "docstatus": 0,
   "doctype": "Editorjs Template",
-  "modified": "2020-08-27 10:36:27.162218",
+  "modified": "2020-12-07 16:15:12.660543",
   "name": "delimiter",
   "parent": null,
   "parentfield": null,
   "parenttype": null,
+  "print_format": "<hr>",
   "type": "delimiter"
  },
  {
@@ -99,11 +182,12 @@
   ],
   "docstatus": 0,
   "doctype": "Editorjs Template",
-  "modified": "2020-08-27 10:37:37.511911",
+  "modified": "2020-12-07 16:13:44.729042",
   "name": "table",
   "parent": null,
   "parentfield": null,
   "parenttype": null,
+  "print_format": "<div>\n<table style=\"width: 100%\">\n{% for row in content  %}\n    <tr>\n    {%  for column in row %}\n    <td>{{ column }}</td>\n    {% endfor %}\n    </tr>\n{% endfor %}\n</table>\n</div>",
   "type": "table"
  },
  {
@@ -124,6 +208,7 @@
   "parent": null,
   "parentfield": null,
   "parenttype": null,
+  "print_format": null,
   "type": "raw"
  },
  {
@@ -139,11 +224,12 @@
   ],
   "docstatus": 0,
   "doctype": "Editorjs Template",
-  "modified": "2020-08-27 10:39:00.513639",
+  "modified": "2020-12-07 16:10:34.472327",
   "name": "text",
   "parent": null,
   "parentfield": null,
   "parenttype": null,
+  "print_format": "<p>{{text}}</p>",
   "type": "text"
  },
  {
@@ -172,6 +258,7 @@
   "parent": null,
   "parentfield": null,
   "parenttype": null,
+  "print_format": null,
   "type": "warning"
  },
  {
@@ -200,6 +287,7 @@
   "parent": null,
   "parentfield": null,
   "parenttype": null,
+  "print_format": null,
   "type": "linkTool"
  },
  {
@@ -220,6 +308,7 @@
   "parent": null,
   "parentfield": null,
   "parenttype": null,
+  "print_format": null,
   "type": "code"
  },
  {
@@ -256,6 +345,7 @@
   "parent": null,
   "parentfield": null,
   "parenttype": null,
+  "print_format": null,
   "type": "quote"
  },
  {
@@ -316,6 +406,7 @@
   "parent": null,
   "parentfield": null,
   "parenttype": null,
+  "print_format": null,
   "type": "embed"
  },
  {
@@ -363,11 +454,12 @@
   ],
   "docstatus": 0,
   "doctype": "Editorjs Template",
-  "modified": "2020-08-27 10:52:07.225261",
+  "modified": "2020-12-07 16:13:55.560418",
   "name": "image",
   "parent": null,
   "parentfield": null,
   "parenttype": null,
+  "print_format": "<figure>\n  <img src=\"{{ site_url + file.url }}\" style=\"width:100%\">\n  <figcaption>{{ caption }}</figcaption>\n</figure>",
   "type": "image"
  },
  {
@@ -383,11 +475,12 @@
   ],
   "docstatus": 0,
   "doctype": "Editorjs Template",
-  "modified": "2020-08-27 11:02:49.273299",
+  "modified": "2020-12-07 16:13:30.891161",
   "name": "checklist",
   "parent": null,
   "parentfield": null,
   "parenttype": null,
+  "print_format": "<div>\n{% for item in items %}\n  <input type=\"checkbox\" {% if item.checked %} checked {% endif %}>\n  <label>{{ item.text }}</label><br>\n{% endfor %}\n</div>\n",
   "type": "checklist"
  },
  {
@@ -408,6 +501,7 @@
   "parent": null,
   "parentfield": null,
   "parenttype": null,
+  "print_format": null,
   "type": "latex"
  },
  {
@@ -427,23 +521,16 @@
     "parentfield": "data",
     "parenttype": "Editorjs Template",
     "type": "List"
-   },
-   {
-    "key": "expanded",
-    "nullable": 0,
-    "parent": "expandable",
-    "parentfield": "data",
-    "parenttype": "Editorjs Template",
-    "type": "Boolean"
    }
   ],
   "docstatus": 0,
   "doctype": "Editorjs Template",
-  "modified": "2020-08-27 14:08:41.724379",
+  "modified": "2020-12-07 16:58:57.211754",
   "name": "expandable",
   "parent": null,
   "parentfield": null,
   "parenttype": null,
+  "print_format": "<details open>\n    <summary>{{header}}</summary>\n    {{body}}\n</details>\n\n",
   "type": "expandable"
  }
 ]
