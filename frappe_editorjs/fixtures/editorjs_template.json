@@ -454,12 +454,12 @@
   ],
   "docstatus": 0,
   "doctype": "Editorjs Template",
-  "modified": "2020-12-07 16:13:55.560418",
+  "modified": "2021-02-06 13:59:23.438698",
   "name": "image",
   "parent": null,
   "parentfield": null,
   "parenttype": null,
-  "print_format": "<figure>\n  <img src=\"{{ site_url + file.url }}\" style=\"width:100%\">\n  <figcaption>{{ caption }}</figcaption>\n</figure>",
+  "print_format": "<figure>\n    <img src=\"{{ file_url }}\" style=\"width:100%\">\n    <figcaption>{{ caption }}</figcaption>\n</figure>",
   "type": "image"
  },
  {

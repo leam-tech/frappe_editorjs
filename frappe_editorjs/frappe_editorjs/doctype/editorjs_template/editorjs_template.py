@@ -87,7 +87,17 @@ class EditorjsTemplate(Document):
 
     context = frappe._dict(data)
 
+    # Logic for handling file urls
     if self.type == 'image':
+      # Print nothing if url is undefined
+      if context.file is None or context.file.get("url") is None:
+        return ""
+      file_url = context.file.get("url")
+      if 'https://' in file_url or 'http://' in file_url:
+        context.file_url = file_url
+      else:
+        context.file_url = get_url() + file_url
+
       context.update(frappe._dict(site_url=get_url()))
     elif self.type == 'expandable':
       body = ""
