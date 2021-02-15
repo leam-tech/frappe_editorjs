@@ -1,0 +1,14 @@
+{
+  "name": "frappe_editorjs",
+  "version": "1.0.0",
+  "description": "EditorJS backend",
+  "dependencies": {
+    "katex": "^0.12.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "MIT"
+}
