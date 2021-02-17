@@ -7,6 +7,7 @@ from __future__ import unicode_literals
 import numbers
 import subprocess
 from json import JSONDecodeError
+from sys import stdout
 
 import frappe
 from frappe import _
@@ -107,15 +108,18 @@ class EditorjsTemplate(Document):
       context.update(frappe._dict(body=body))
     elif self.type == 'Math':
       output = ""
+      error = ""
       process = subprocess.Popen(['echo', '-n', " " + context.get("text").replace('\\\\',
                                                                                   '\\') + " "],
                                  stdout=subprocess.PIPE, stderr=subprocess.PIPE)
       try:
-        output = subprocess.check_output(('katex', '--display-mode'), stdin=process.stdout)
+        output = subprocess.check_output(('katex', '--display-mode'), stdin=process.stdout, stderr=subprocess.STDOUT)
       except Exception as e:
-        print(e)
+        frappe.log_error(frappe.as_json(e))
+        error = str(e)
       process.wait()
-      context.update(frappe._dict(error=str(""), rendered_katex=output.decode('utf-8')))
+      context.update(frappe._dict(rendered_katex= error if not output else output.decode(
+          'utf-8')))
 
     return frappe.render_template(self.print_format, context=context)
 
