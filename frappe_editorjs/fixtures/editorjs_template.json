@@ -41,12 +41,12 @@
   ],
   "docstatus": 0,
   "doctype": "Editorjs Template",
-  "modified": "2020-11-03 12:45:56.122007",
+  "modified": "2021-02-23 16:04:43.724414",
   "name": "Math",
   "parent": null,
   "parentfield": null,
   "parenttype": null,
-  "print_format": null,
+  "print_format": "{{rendered_katex}}",
   "type": "Math"
  },
  {
